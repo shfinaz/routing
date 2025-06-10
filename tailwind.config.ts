@@ -1,12 +1,16 @@
 import type {Config} from "tailwindcss"
 
 const config: Config = {
-    darkMode: "class",
+    darkMode: 'class',
     content: [
+        
         "./pages/**/*.{js,ts,jsx,tsx,mdx}",
         "./components/**/*.{js,ts,jsx,tsx,mdx}",
         "./app/**/*.{js,ts,jsx,tsx,mdx}",
     ],
+    
+    //   safelist: ['bg-auth-light', 'dark:bg-auth-dark'],
+
     theme: {
         extend: {
             colors: {
@@ -42,12 +46,18 @@ const config: Config = {
             },
             fontFamily: {
                 inter: ["var(--font-inter"],
-                'space-grotesk': ["var(--font-space-grotesk"]
+                'space-grotesk': ["var(--font-space-grotesk)"]
             },
             borderRadius:{
+                "2": "8px",
+                "1.5": "6px",
                 lg: 'var(--radius)',
                 md: 'calc(var(--radius) - 2px)',
                 sm: 'calc(var(--radius) - 4px)'
+            },
+            backgroundImage: {
+                "auth-dark": 'url("/images/auth-dark.png")',
+                "auth-light": 'url("/images/auth-light.png")',
             }
         }
     },
