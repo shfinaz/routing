@@ -32,27 +32,25 @@ const RootLayout = async ({ children }: { children: ReactNode }) => {
 
   const session = await auth(); 
 
-  return (
+return (
     <html lang="en" suppressHydrationWarning>
       <SessionProvider session={session}>
         <body
-          className={`${inter.className} ${spaceGrotesk.variable} antialiased`}>
-
-            <ThemeProvider 
-            attribute="class" 
-            defaultTheme="system" 
-            enableSystem 
+          className={`${inter.className} ${spaceGrotesk.variable} antialiased`}
+        >
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
             disableTransitionOnChange
-            >
-            {/* all pages is down here : in children */}
-            {children}  
-            </ThemeProvider>
+          >
+            {children}
+          </ThemeProvider>
           <Toaster />
         </body>
       </SessionProvider>
     </html>
   );
-}
-
+};
 
 export default RootLayout;
