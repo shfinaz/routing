@@ -1,7 +1,7 @@
 const ROUTES = {
     HOME: "/",
     SIGN_IN: "/sign-in",
-    SING_UP: "/sign-up",
+    SIGN_UP: "/sign-up",
 
 }
 
